@@ -5,7 +5,7 @@
 -- Today is July 24, 2022.
 DELETE FROM Reservations where CustomerID=
 (SELECT CustomerID from Customers where FirstName='Norby')
-AND Date='2022-07-29 18:30:00';
+AND Date>'2022-07-24';
 SELECT * FROM Reservations where CustomerID=(SELECT CustomerID 
 from Customers where FirstName='Norby')
-AND Date='2022-07-29 18:30:00';;
+AND Date>'2022-07-24';
